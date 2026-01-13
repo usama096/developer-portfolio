@@ -226,7 +226,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
   const mdxSource = await serialize(post.content, {
     mdxOptions: {
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypeSlug, rehypeHighlight],
+      rehypePlugins: [rehypeSlug, rehypeHighlight] as any[],
     },
   });
 

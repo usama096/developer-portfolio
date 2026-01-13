@@ -1,0 +1,11 @@
+# Robots.txt for johndoe.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://johndoe.dev/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+

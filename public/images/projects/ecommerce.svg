@@ -1,0 +1,19 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#22c55e" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect x="250" y="120" width="300" height="200" rx="12" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  <rect x="270" y="140" width="120" height="80" rx="8" fill="#27272a"/>
+  <rect x="270" y="235" width="80" height="12" rx="4" fill="#3f3f46"/>
+  <rect x="270" y="255" width="120" height="8" rx="4" fill="#27272a"/>
+  <rect x="410" y="140" width="120" height="80" rx="8" fill="#27272a"/>
+  <rect x="410" y="235" width="80" height="12" rx="4" fill="#3f3f46"/>
+  <rect x="410" y="255" width="120" height="8" rx="4" fill="#27272a"/>
+  <rect x="270" y="280" width="100" height="30" rx="6" fill="#22c55e"/>
+  <text x="320" y="300" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="bold">Buy Now</text>
+  <text x="400" y="380" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="14">E-Commerce Platform</text>
+</svg>

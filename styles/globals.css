@@ -1,0 +1,162 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@700,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #fafafa;
+    --color-bg-secondary: #ffffff;
+    --color-text: #0a0a0c;
+    --color-text-secondary: #52525b;
+    --color-border: #e4e4e7;
+    --color-accent: #22c55e;
+    --color-accent-hover: #16a34a;
+  }
+
+  .dark {
+    --color-bg: #0a0a0c;
+    --color-bg-secondary: #18181b;
+    --color-text: #fafafa;
+    --color-text-secondary: #a1a1aa;
+    --color-border: #27272a;
+    --color-accent: #4ade80;
+    --color-accent-hover: #22c55e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans antialiased;
+    background-image: 
+      radial-gradient(at 27% 37%, hsla(142, 75%, 60%, 0.04) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, hsla(142, 75%, 40%, 0.03) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, hsla(142, 75%, 50%, 0.03) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, hsla(142, 75%, 55%, 0.02) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-primary-500/30;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-xl {
+    @apply font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+  }
+
+  .heading-lg {
+    @apply font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .heading-md {
+    @apply font-display text-2xl sm:text-3xl font-bold tracking-tight;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+           bg-primary-500 text-white font-medium
+           hover:bg-primary-600 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[var(--color-bg)];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+           border border-[var(--color-border)] bg-[var(--color-bg-secondary)]
+           text-[var(--color-text)] font-medium
+           hover:border-primary-500/50 hover:bg-primary-500/5 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-[var(--color-bg-secondary)] border border-[var(--color-border)] 
+           rounded-2xl overflow-hidden transition-all duration-300
+           hover:border-primary-500/30 hover:shadow-lg hover:shadow-primary-500/5;
+  }
+
+  .link-underline {
+    @apply relative inline-block text-primary-500 font-medium;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+/* Code block styling */
+pre {
+  @apply rounded-xl p-4 overflow-x-auto text-sm;
+  background: #1e1e2e !important;
+}
+
+code {
+  @apply font-mono text-sm;
+}
+
+:not(pre) > code {
+  @apply bg-[var(--color-bg-secondary)] border border-[var(--color-border)] 
+         px-1.5 py-0.5 rounded text-primary-500;
+}
+
+/* Prose customization */
+.prose {
+  @apply text-[var(--color-text-secondary)];
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-[var(--color-text)] font-display;
+}
+
+.prose a {
+  @apply text-primary-500 no-underline hover:underline;
+}
+
+.prose strong {
+  @apply text-[var(--color-text)];
+}
+
+.prose img {
+  @apply rounded-xl;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--color-border)] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[var(--color-text-secondary)];
+}
+

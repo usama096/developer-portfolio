@@ -1,0 +1,26 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#22c55e" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <!-- Phone mockup -->
+  <rect x="320" y="80" width="160" height="290" rx="20" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  <rect x="330" y="100" width="140" height="250" rx="8" fill="#27272a"/>
+  <!-- Stats -->
+  <circle cx="400" cy="170" r="50" fill="none" stroke="#22c55e" stroke-width="6" stroke-dasharray="200 100"/>
+  <text x="400" y="175" text-anchor="middle" fill="#fafafa" font-family="system-ui" font-size="20" font-weight="bold">75%</text>
+  <text x="400" y="195" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">Goal</text>
+  <!-- Bars -->
+  <rect x="345" y="250" width="20" height="60" rx="4" fill="#22c55e" opacity="0.3"/>
+  <rect x="345" y="280" width="20" height="30" rx="4" fill="#22c55e"/>
+  <rect x="375" y="250" width="20" height="60" rx="4" fill="#22c55e" opacity="0.3"/>
+  <rect x="375" y="260" width="20" height="50" rx="4" fill="#22c55e"/>
+  <rect x="405" y="250" width="20" height="60" rx="4" fill="#22c55e" opacity="0.3"/>
+  <rect x="405" y="270" width="20" height="40" rx="4" fill="#22c55e"/>
+  <rect x="435" y="250" width="20" height="60" rx="4" fill="#22c55e" opacity="0.3"/>
+  <rect x="435" y="290" width="20" height="20" rx="4" fill="#22c55e"/>
+  <text x="400" y="390" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="14">Fitness Tracking App</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#22c55e" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <!-- Chart area -->
+  <rect x="200" y="100" width="400" height="220" rx="12" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  <!-- Line chart -->
+  <polyline points="230,250 280,220 330,240 380,180 430,200 480,150 530,170 570,130" fill="none" stroke="#22c55e" stroke-width="3"/>
+  <circle cx="230" cy="250" r="4" fill="#22c55e"/>
+  <circle cx="280" cy="220" r="4" fill="#22c55e"/>
+  <circle cx="330" cy="240" r="4" fill="#22c55e"/>
+  <circle cx="380" cy="180" r="4" fill="#22c55e"/>
+  <circle cx="430" cy="200" r="4" fill="#22c55e"/>
+  <circle cx="480" cy="150" r="4" fill="#22c55e"/>
+  <circle cx="530" cy="170" r="4" fill="#22c55e"/>
+  <circle cx="570" cy="130" r="4" fill="#22c55e"/>
+  <!-- Stats -->
+  <text x="250" y="290" fill="#22c55e" font-family="system-ui" font-size="14" font-weight="bold">+24.5%</text>
+  <text x="400" y="290" fill="#71717a" font-family="system-ui" font-size="12">Portfolio Growth</text>
+  <text x="400" y="380" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="14">Financial Analytics Platform</text>
+</svg>

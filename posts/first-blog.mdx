@@ -1,0 +1,121 @@
+---
+title: "How I Solved a Real-World Problem Using Union-Find"
+description: "A practical explanation of using Disjoint Set Union (DSU) data structure to solve a complex connectivity problem in production."
+date: "2026-01-10"
+image: "/blog-images/union-find.svg"
+---
+
+When I first encountered the Union-Find data structure in college, I thought it was just another academic exercise. Little did I know that years later, it would become the key to solving a critical performance issue in a production system.
+
+## The Problem
+
+We were building a social network feature that needed to determine if two users were connected through mutual friends. The naive approach of running BFS/DFS for every query was killing our performance.
+
+```typescript
+// The naive approach - O(V + E) per query
+function areConnected(user1: string, user2: string): boolean {
+  const visited = new Set<string>();
+  const queue = [user1];
+  
+  while (queue.length > 0) {
+    const current = queue.shift()!;
+    if (current === user2) return true;
+    
+    visited.add(current);
+    for (const friend of getFriends(current)) {
+      if (!visited.has(friend)) {
+        queue.push(friend);
+      }
+    }
+  }
+  
+  return false;
+}
+```
+
+With millions of users and thousands of queries per second, this wasn't going to cut it.
+
+## Enter Union-Find
+
+The Union-Find (or Disjoint Set Union) data structure provides near-constant time operations for:
+- **Union**: Connecting two elements
+- **Find**: Determining which set an element belongs to
+
+Here's the optimized implementation I used:
+
+```typescript
+class UnionFind {
+  private parent: Map<string, string> = new Map();
+  private rank: Map<string, number> = new Map();
+
+  find(x: string): string {
+    if (!this.parent.has(x)) {
+      this.parent.set(x, x);
+      this.rank.set(x, 0);
+    }
+    
+    if (this.parent.get(x) !== x) {
+      // Path compression
+      this.parent.set(x, this.find(this.parent.get(x)!));
+    }
+    
+    return this.parent.get(x)!;
+  }
+
+  union(x: string, y: string): void {
+    const rootX = this.find(x);
+    const rootY = this.find(y);
+    
+    if (rootX === rootY) return;
+    
+    // Union by rank
+    const rankX = this.rank.get(rootX)!;
+    const rankY = this.rank.get(rootY)!;
+    
+    if (rankX < rankY) {
+      this.parent.set(rootX, rootY);
+    } else if (rankX > rankY) {
+      this.parent.set(rootY, rootX);
+    } else {
+      this.parent.set(rootY, rootX);
+      this.rank.set(rootX, rankX + 1);
+    }
+  }
+
+  connected(x: string, y: string): boolean {
+    return this.find(x) === this.find(y);
+  }
+}
+```
+
+## The Results
+
+After implementing Union-Find with path compression and union by rank:
+
+- Query time dropped from **~500ms to <1ms**
+- Server CPU usage decreased by **40%**
+- We could handle **10x more concurrent users**
+
+## Key Takeaways
+
+1. **Classic algorithms are still relevant** - Don't dismiss academic concepts; they often solve real problems elegantly.
+
+2. **Understand your data access patterns** - If you're doing many connectivity queries with few updates, Union-Find is perfect.
+
+3. **Optimize incrementally** - We started with the naive approach, measured, and then optimized. Don't prematurely optimize.
+
+## When to Use Union-Find
+
+Union-Find is ideal for:
+- Network connectivity problems
+- Image segmentation
+- Kruskal's minimum spanning tree
+- Detecting cycles in graphs
+- Social network friend groups
+
+The next time you're dealing with connectivity or grouping problems, consider if Union-Find might be the elegant solution you need.
+
+---
+
+*Have questions about implementing Union-Find in your project? Feel free to [reach out](mailto:hello@johndoe.dev)!*
+

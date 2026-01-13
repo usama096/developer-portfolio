@@ -1,0 +1,23 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0a0c"/>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#22c55e" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <!-- Terminal window -->
+  <rect x="200" y="100" width="400" height="250" rx="12" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+  <rect x="200" y="100" width="400" height="30" rx="12" fill="#27272a"/>
+  <circle cx="220" cy="115" r="6" fill="#ef4444"/>
+  <circle cx="240" cy="115" r="6" fill="#eab308"/>
+  <circle cx="260" cy="115" r="6" fill="#22c55e"/>
+  <!-- Terminal content -->
+  <text x="220" y="160" fill="#22c55e" font-family="monospace" font-size="12">$ kubectl get pods</text>
+  <text x="220" y="185" fill="#71717a" font-family="monospace" font-size="11">NAME                    READY   STATUS</text>
+  <text x="220" y="205" fill="#fafafa" font-family="monospace" font-size="11">api-server-7d8f9c      1/1     Running</text>
+  <text x="220" y="225" fill="#fafafa" font-family="monospace" font-size="11">web-frontend-4b2c1     1/1     Running</text>
+  <text x="220" y="245" fill="#fafafa" font-family="monospace" font-size="11">redis-cache-9a3e7      1/1     Running</text>
+  <text x="220" y="275" fill="#22c55e" font-family="monospace" font-size="12">$ _</text>
+  <text x="400" y="390" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="14">DevOps Dashboard</text>
+</svg>

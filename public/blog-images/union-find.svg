@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0c"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#22c55e" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Decorative circles (nodes) -->
+  <circle cx="300" cy="200" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="300" cy="200" r="30" fill="#22c55e" opacity="0.4"/>
+  <circle cx="500" cy="150" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="500" cy="150" r="30" fill="#22c55e" opacity="0.4"/>
+  <circle cx="700" cy="200" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="700" cy="200" r="30" fill="#22c55e" opacity="0.4"/>
+  <circle cx="400" cy="350" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="400" cy="350" r="30" fill="#22c55e" opacity="0.4"/>
+  <circle cx="600" cy="350" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="600" cy="350" r="30" fill="#22c55e" opacity="0.4"/>
+  <circle cx="900" cy="300" r="40" fill="#22c55e" opacity="0.2"/>
+  <circle cx="900" cy="300" r="30" fill="#22c55e" opacity="0.4"/>
+  
+  <!-- Connecting lines -->
+  <line x1="330" y1="200" x2="470" y2="150" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  <line x1="530" y1="150" x2="670" y2="200" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="230" x2="380" y2="320" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  <line x1="430" y1="350" x2="570" y2="350" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  <line x1="620" y1="320" x2="680" y2="230" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  <line x1="730" y1="200" x2="870" y2="300" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Title -->
+  <text x="600" y="500" text-anchor="middle" fill="#fafafa" font-family="system-ui" font-size="48" font-weight="bold">Union-Find Algorithm</text>
+  <text x="600" y="550" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="24">Solving Real-World Connectivity Problems</text>
+</svg>

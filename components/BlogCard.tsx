@@ -45,15 +45,18 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
         {/* Content */}
         <div className="p-6">
           {/* Date - FIX: Added dateTime attribute for SEO/accessibility */}
-          <time dateTime={isoDate} className="text-xs font-medium text-primary-500 uppercase tracking-wider">
+          <time
+            dateTime={isoDate}
+            className="text-xs font-medium text-primary-500 uppercase tracking-wider"
+          >
             {formattedDate}
           </time>
-          
+
           {/* Title */}
           <h3 className="font-display font-bold text-xl mt-2 mb-3 group-hover:text-primary-500 transition-colors line-clamp-2">
             {title}
           </h3>
-          
+
           {/* Description */}
           <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed line-clamp-3">
             {description}
@@ -63,7 +66,12 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
           <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary-500 group-hover:gap-3 transition-all">
             Read Article
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </div>
         </div>
@@ -71,4 +79,3 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
     </motion.article>
   );
 }
-

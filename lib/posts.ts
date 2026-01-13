@@ -55,16 +55,16 @@ export function getAllPosts(): BlogPost[] {
 export function getPostBySlug(slug: string): (BlogPost & { content: string }) | null {
   // FIX: Sanitize slug input to prevent path traversal
   const safeSlug = sanitizeSlug(slug);
-  
+
   try {
     const fullPath = path.join(postsDirectory, `${safeSlug}.mdx`);
-    
+
     // Additional security: verify the resolved path is within posts directory
     const resolvedPath = path.resolve(fullPath);
     if (!resolvedPath.startsWith(path.resolve(postsDirectory))) {
       return null;
     }
-    
+
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
@@ -91,4 +91,3 @@ export function getAllPostSlugs(): string[] {
     .filter((fileName) => fileName.endsWith('.mdx'))
     .map((fileName) => sanitizeSlug(fileName.replace(/\.mdx$/, '')));
 }
-

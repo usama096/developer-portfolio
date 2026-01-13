@@ -25,7 +25,7 @@ A modern, SEO-optimized portfolio website built with Next.js, TypeScript, and Ta
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
@@ -94,10 +94,10 @@ Create a new `.mdx` file in the `posts/` directory:
 
 ```mdx
 ---
-title: "Your Post Title"
-description: "A brief description"
-date: "2026-01-15"
-image: "/blog-images/your-image.png"
+title: 'Your Post Title'
+description: 'A brief description'
+date: '2026-01-15'
+image: '/blog-images/your-image.png'
 ---
 
 Your content here...
@@ -123,6 +123,7 @@ Add a new project to `data/projects.ts`:
 ### Personal Information
 
 Update the following files with your information:
+
 - `components/Navbar.tsx` - Logo initials and name
 - `components/Footer.tsx` - Contact info and social links
 - `components/Layout.tsx` - Default SEO meta tags
@@ -148,6 +149,7 @@ The site will automatically rebuild when you push changes.
 ### Other Platforms
 
 Since this is a static site, you can deploy to any static hosting:
+
 - Netlify
 - GitHub Pages
 - Cloudflare Pages
@@ -156,4 +158,3 @@ Since this is a static site, you can deploy to any static hosting:
 ## License
 
 MIT License - feel free to use this template for your own portfolio!
-

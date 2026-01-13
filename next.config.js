@@ -6,6 +6,6 @@ const nextConfig = {
   },
   pageExtensions: ['ts', 'tsx', 'mdx'],
   trailingSlash: true,
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

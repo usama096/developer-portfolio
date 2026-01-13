@@ -30,7 +30,7 @@ export default function Home({ recentPosts }: HomeProps) {
         {/* Background decorations */}
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
-        
+
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
@@ -47,24 +47,31 @@ export default function Home({ recentPosts }: HomeProps) {
               </div>
 
               <h1 className="heading-xl mb-6">
-                Hi, I&apos;m{' '}
-                <span className="text-gradient">Usama Hafeez</span>
+                Hi, I&apos;m <span className="text-gradient">Usama Hafeez</span>
                 <br />
-                <span className="text-[var(--color-text-secondary)]">
-                  Senior Software Engineer
-                </span>
+                <span className="text-[var(--color-text-secondary)]">Senior Software Engineer</span>
               </h1>
 
               <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-xl">
-                I craft scalable web applications and elegant solutions to complex problems.
-                With 5+ years of experience, I specialize in building products that make a difference.
+                I craft scalable web applications and elegant solutions to complex problems. With 5+
+                years of experience, I specialize in building products that make a difference.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <Link href="/projects" className="btn-primary">
                   View My Work
-                  <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </Link>
                 <Link href="/about" className="btn-secondary">
@@ -80,7 +87,9 @@ export default function Home({ recentPosts }: HomeProps) {
                 </div>
                 <div>
                   <div className="text-3xl font-display font-bold text-gradient">50+</div>
-                  <div className="text-sm text-[var(--color-text-secondary)]">Projects Completed</div>
+                  <div className="text-sm text-[var(--color-text-secondary)]">
+                    Projects Completed
+                  </div>
                 </div>
                 <div>
                   <div className="text-3xl font-display font-bold text-gradient">20+</div>
@@ -99,7 +108,7 @@ export default function Home({ recentPosts }: HomeProps) {
               <div className="relative aspect-square max-w-md mx-auto">
                 {/* Decorative ring */}
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary-500/30 animate-[spin_20s_linear_infinite]" />
-                
+
                 {/* Main image container */}
                 <div className="absolute inset-4 rounded-full overflow-hidden bg-gradient-to-br from-primary-500/20 to-primary-600/20 p-1">
                   <div className="w-full h-full rounded-full overflow-hidden bg-[var(--color-bg-secondary)]">
@@ -193,7 +202,8 @@ export default function Home({ recentPosts }: HomeProps) {
             <div>
               <h2 className="heading-lg mb-4">Featured Projects</h2>
               <p className="text-[var(--color-text-secondary)] max-w-xl">
-                A selection of projects that showcase my expertise and passion for building great software
+                A selection of projects that showcase my expertise and passion for building great
+                software
               </p>
             </div>
             <Link href="/projects" className="link-underline shrink-0">
@@ -259,11 +269,10 @@ export default function Home({ recentPosts }: HomeProps) {
             </div>
 
             <div className="relative z-10">
-              <h2 className="heading-lg text-white mb-4">
-                Let&apos;s Work Together
-              </h2>
+              <h2 className="heading-lg text-white mb-4">Let&apos;s Work Together</h2>
               <p className="text-white/80 max-w-2xl mx-auto mb-8 text-lg">
-                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to
+                be part of your vision.
               </p>
               <a
                 href="mailto:hello@usamahafeez.dev"
@@ -271,7 +280,12 @@ export default function Home({ recentPosts }: HomeProps) {
               >
                 Get in Touch
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
               </a>
             </div>
@@ -292,4 +306,3 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     },
   };
 };
-

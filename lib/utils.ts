@@ -35,4 +35,3 @@ export function formatDate(dateStr: string): string {
 export function getISODate(dateStr: string): string {
   return new Date(dateStr).toISOString();
 }
-

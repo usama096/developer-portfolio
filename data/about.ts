@@ -6,19 +6,22 @@ export const experiences: Experience[] = [
     title: 'Senior Software Engineer',
     company: 'Tech Innovators Inc.',
     period: '2022 - Present',
-    description: 'Leading development of cloud-native applications serving millions of users. Architected microservices infrastructure reducing deployment time by 60%.',
+    description:
+      'Leading development of cloud-native applications serving millions of users. Architected microservices infrastructure reducing deployment time by 60%.',
   },
   {
     title: 'Software Engineer',
     company: 'StartupXYZ',
     period: '2020 - 2022',
-    description: 'Built and scaled the core product from MVP to production, handling 100k+ daily active users. Implemented real-time features using WebSockets.',
+    description:
+      'Built and scaled the core product from MVP to production, handling 100k+ daily active users. Implemented real-time features using WebSockets.',
   },
   {
     title: 'Junior Developer',
     company: 'Digital Agency Co.',
     period: '2018 - 2020',
-    description: 'Developed responsive web applications for enterprise clients. Collaborated with design teams to implement pixel-perfect UIs.',
+    description:
+      'Developed responsive web applications for enterprise clients. Collaborated with design teams to implement pixel-perfect UIs.',
   },
 ];
 
@@ -67,4 +70,3 @@ export const values: Value[] = [
     description: 'Time is valuable. I focus on delivering maximum value with minimal waste.',
   },
 ];
-

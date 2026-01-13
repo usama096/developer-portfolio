@@ -44,19 +44,15 @@ const components: MDXComponents = {
   a: (props) => {
     const isExternal = props.href?.startsWith('http') || props.href?.startsWith('//');
     return (
-      <a 
-        {...props} 
-        className="text-primary-500 hover:underline" 
+      <a
+        {...props}
+        className="text-primary-500 hover:underline"
         {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       />
     );
   },
-  pre: (props) => (
-    <pre {...props} className="rounded-xl overflow-x-auto" />
-  ),
-  code: (props) => (
-    <code {...props} className="font-mono" />
-  ),
+  pre: (props) => <pre {...props} className="rounded-xl overflow-x-auto" />,
+  code: (props) => <code {...props} className="font-mono" />,
 };
 
 export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostPageProps) {
@@ -87,7 +83,12 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
                 className="inline-flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-primary-500 transition-colors mb-8"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
                 Back to Blog
               </Link>
@@ -99,9 +100,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
                 </time>
                 <span className="text-[var(--color-text-secondary)]">•</span>
                 {/* FIX: Dynamic reading time calculation */}
-                <span className="text-sm text-[var(--color-text-secondary)]">
-                  {readingTime}
-                </span>
+                <span className="text-sm text-[var(--color-text-secondary)]">{readingTime}</span>
               </div>
 
               {/* Title */}
@@ -124,13 +123,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
         >
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-[2/1] rounded-2xl overflow-hidden">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-                priority
-              />
+              <Image src={post.image} alt={post.title} fill className="object-cover" priority />
             </div>
           </div>
         </motion.div>
@@ -211,7 +204,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const slugs = getAllPostSlugs();
-  
+
   return {
     paths: slugs.map((slug) => ({
       params: { slug },
@@ -254,4 +247,3 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({ params
     },
   };
 };
-

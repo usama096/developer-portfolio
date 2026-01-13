@@ -1,8 +1,8 @@
 ---
-title: "How I Solved a Real-World Problem Using Union-Find"
-description: "A practical explanation of using Disjoint Set Union (DSU) data structure to solve a complex connectivity problem in production."
-date: "2026-01-10"
-image: "/blog-images/union-find.svg"
+title: 'How I Solved a Real-World Problem Using Union-Find'
+description: 'A practical explanation of using Disjoint Set Union (DSU) data structure to solve a complex connectivity problem in production.'
+date: '2026-01-10'
+image: '/blog-images/union-find.svg'
 ---
 
 When I first encountered the Union-Find data structure in college, I thought it was just another academic exercise. Little did I know that years later, it would become the key to solving a critical performance issue in a production system.
@@ -16,11 +16,11 @@ We were building a social network feature that needed to determine if two users 
 function areConnected(user1: string, user2: string): boolean {
   const visited = new Set<string>();
   const queue = [user1];
-  
+
   while (queue.length > 0) {
     const current = queue.shift()!;
     if (current === user2) return true;
-    
+
     visited.add(current);
     for (const friend of getFriends(current)) {
       if (!visited.has(friend)) {
@@ -28,7 +28,7 @@ function areConnected(user1: string, user2: string): boolean {
       }
     }
   }
-  
+
   return false;
 }
 ```
@@ -38,6 +38,7 @@ With millions of users and thousands of queries per second, this wasn't going to
 ## Enter Union-Find
 
 The Union-Find (or Disjoint Set Union) data structure provides near-constant time operations for:
+
 - **Union**: Connecting two elements
 - **Find**: Determining which set an element belongs to
 
@@ -53,25 +54,25 @@ class UnionFind {
       this.parent.set(x, x);
       this.rank.set(x, 0);
     }
-    
+
     if (this.parent.get(x) !== x) {
       // Path compression
       this.parent.set(x, this.find(this.parent.get(x)!));
     }
-    
+
     return this.parent.get(x)!;
   }
 
   union(x: string, y: string): void {
     const rootX = this.find(x);
     const rootY = this.find(y);
-    
+
     if (rootX === rootY) return;
-    
+
     // Union by rank
     const rankX = this.rank.get(rootX)!;
     const rankY = this.rank.get(rootY)!;
-    
+
     if (rankX < rankY) {
       this.parent.set(rootX, rootY);
     } else if (rankX > rankY) {
@@ -107,6 +108,7 @@ After implementing Union-Find with path compression and union by rank:
 ## When to Use Union-Find
 
 Union-Find is ideal for:
+
 - Network connectivity problems
 - Image segmentation
 - Kruskal's minimum spanning tree
@@ -117,5 +119,4 @@ The next time you're dealing with connectivity or grouping problems, consider if
 
 ---
 
-*Have questions about implementing Union-Find in your project? Feel free to [reach out](mailto:hello@usamahafeez.dev)!*
-
+_Have questions about implementing Union-Find in your project? Feel free to [reach out](mailto:hello@usamahafeez.dev)!_

@@ -14,7 +14,7 @@ const staticPages = [
 // Get blog posts
 function getBlogPosts() {
   const postsDirectory = path.join(process.cwd(), 'posts');
-  
+
   if (!fs.existsSync(postsDirectory)) {
     return [];
   }
@@ -46,7 +46,7 @@ ${allPages
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`
+  </url>`,
   )
   .join('\n')}
 </urlset>`;
@@ -54,17 +54,16 @@ ${allPages
   // Write to public directory
   const outDir = path.join(process.cwd(), 'out');
   const publicDir = path.join(process.cwd(), 'public');
-  
+
   // Write to out directory if it exists (after build)
   if (fs.existsSync(outDir)) {
     fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
     console.log('✓ Sitemap generated at out/sitemap.xml');
   }
-  
+
   // Also write to public directory
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
   console.log('✓ Sitemap generated at public/sitemap.xml');
 }
 
 generateSitemap();
-

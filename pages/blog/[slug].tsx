@@ -66,7 +66,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
 
   return (
     <Layout
-      title={`${post.title} - John Doe`}
+      title={`${post.title} - Usama Hafeez`}
       description={post.description}
       image={post.image}
       url={`/blog/${post.slug}`}
@@ -160,13 +160,13 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
                     <div className="relative w-14 h-14 rounded-full overflow-hidden">
                       <Image
                         src="/images/profile.svg"
-                        alt="John Doe"
+                        alt="Usama Hafeez"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div>
-                      <p className="font-display font-bold">John Doe</p>
+                      <p className="font-display font-bold">Usama Hafeez</p>
                       <p className="text-sm text-[var(--color-text-secondary)]">
                         Senior Software Engineer
                       </p>
@@ -177,7 +177,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
                   <div className="flex items-center gap-3">
                     <span className="text-sm text-[var(--color-text-secondary)]">Share:</span>
                     <a
-                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://johndoe.dev/blog/${post.slug}`)}`}
+                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://usamahafeez.dev/blog/${post.slug}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-primary-500/50 transition-colors"
@@ -188,7 +188,7 @@ export default function BlogPostPage({ post, mdxSource, readingTime }: BlogPostP
                       </svg>
                     </a>
                     <a
-                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://johndoe.dev/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://usamahafeez.dev/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-primary-500/50 transition-colors"

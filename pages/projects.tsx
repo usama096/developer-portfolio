@@ -6,7 +6,7 @@ import { projects } from '../data/projects';
 export default function Projects() {
   return (
     <Layout
-      title="Projects - John Doe"
+      title="Projects - Usama Hafeez"
       description="Explore my portfolio of projects ranging from e-commerce platforms to AI-powered tools. See how I solve real-world problems with code."
       url="/projects"
     >
@@ -52,11 +52,11 @@ export default function Projects() {
               an enterprise solution, or an open-source contribution, let&apos;s talk!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="mailto:hello@johndoe.dev" className="btn-primary">
+              <a href="mailto:hello@usamahafeez.dev" className="btn-primary">
                 Start a Conversation
               </a>
               <a
-                href="https://github.com/johndoe"
+                href="https://github.com/usama096"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"

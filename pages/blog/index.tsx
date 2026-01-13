@@ -12,7 +12,7 @@ interface BlogIndexProps {
 export default function BlogIndex({ posts }: BlogIndexProps) {
   return (
     <Layout
-      title="Blog - John Doe"
+      title="Blog - Usama Hafeez"
       description="Thoughts, tutorials, and insights about software development, web technologies, and my journey as a developer."
       url="/blog"
     >

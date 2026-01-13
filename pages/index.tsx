@@ -48,7 +48,7 @@ export default function Home({ recentPosts }: HomeProps) {
 
               <h1 className="heading-xl mb-6">
                 Hi, I&apos;m{' '}
-                <span className="text-gradient">John Doe</span>
+                <span className="text-gradient">Usama Hafeez</span>
                 <br />
                 <span className="text-[var(--color-text-secondary)]">
                   Senior Software Engineer
@@ -105,7 +105,7 @@ export default function Home({ recentPosts }: HomeProps) {
                   <div className="w-full h-full rounded-full overflow-hidden bg-[var(--color-bg-secondary)]">
                     <Image
                       src="/images/profile.svg"
-                      alt="John Doe"
+                      alt="Usama Hafeez"
                       fill
                       className="object-cover"
                       priority
@@ -266,7 +266,7 @@ export default function Home({ recentPosts }: HomeProps) {
                 I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               <a
-                href="mailto:hello@johndoe.dev"
+                href="mailto:hello@usamahafeez.dev"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-primary-600 font-bold hover:bg-white/90 transition-colors"
               >
                 Get in Touch

@@ -7,8 +7,8 @@ import { experiences, education, values } from '../data/about';
 export default function About() {
   return (
     <Layout
-      title="About - John Doe"
-      description="Learn more about John Doe, a Senior Software Engineer with 5+ years of experience in building scalable web applications."
+      title="About - Usama Hafeez"
+      description="Learn more about Usama Hafeez, a Senior Software Engineer with 5+ years of experience in building scalable web applications."
       url="/about"
     >
       {/* Hero Section */}
@@ -25,7 +25,7 @@ export default function About() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/profile.svg"
-                  alt="John Doe"
+                  alt="Usama Hafeez"
                   fill
                   className="object-cover"
                   priority
@@ -67,7 +67,7 @@ export default function About() {
               {/* Download Resume */}
               <div className="mt-8">
                 <a
-                  href="/resume.pdf"
+                  href="/Usama_Software_Engineer_Resume.pdf"
                   className="btn-primary"
                   download
                 >

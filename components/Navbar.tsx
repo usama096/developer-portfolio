@@ -64,10 +64,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white font-display font-bold text-lg group-hover:scale-105 transition-transform">
-              JD
+              UH
             </div>
             <span className="font-display font-bold text-lg hidden sm:block">
-              John Doe
+              Usama Hafeez
             </span>
           </Link>
 
@@ -116,7 +116,7 @@ export default function Navbar() {
 
             {/* Contact Button */}
             <a
-              href="mailto:hello@johndoe.dev"
+              href="mailto:hello@usamahafeez.dev"
               className="hidden sm:inline-flex btn-primary"
             >
               Get in Touch
@@ -164,7 +164,7 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <a
-                  href="mailto:hello@johndoe.dev"
+                  href="mailto:hello@usamahafeez.dev"
                   className="block mx-4 mt-4 btn-primary text-center"
                 >
                   Get in Touch

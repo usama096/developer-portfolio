@@ -18,7 +18,7 @@
   <rect x="420" y="178" width="2" height="12" fill="#3b82f6"/>
   <!-- User avatars -->
   <circle cx="520" cy="280" r="20" fill="#22c55e"/>
-  <text x="520" y="285" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="bold">JD</text>
+  <text x="520" y="285" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="bold">UH</text>
   <circle cx="480" cy="280" r="20" fill="#3b82f6"/>
   <text x="480" y="285" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="bold">AB</text>
   <text x="400" y="380" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="14">Real-Time Collaboration</text>

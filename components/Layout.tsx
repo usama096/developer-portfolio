@@ -14,8 +14,8 @@ interface LayoutProps {
 }
 
 // Constants extracted to avoid magic strings
-const SITE_URL = 'https://johndoe.dev';
-const DEFAULT_TITLE = 'John Doe - Senior Software Engineer';
+const SITE_URL = 'https://usamahafeez.dev';
+const DEFAULT_TITLE = 'Usama Hafeez - Senior Software Engineer';
 const DEFAULT_DESCRIPTION = 'Senior Software Engineer with 5+ years of experience building scalable web applications. Specializing in React, Node.js, and cloud architecture.';
 const DEFAULT_IMAGE = '/images/og-image.svg';
 
@@ -44,7 +44,7 @@ export default function Layout({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={fullImage} />
-        <meta property="og:site_name" content="John Doe" />
+        <meta property="og:site_name" content="Usama Hafeez" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

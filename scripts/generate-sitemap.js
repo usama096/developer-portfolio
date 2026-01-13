@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://johndoe.dev';
+const SITE_URL = 'https://usamahafeez.dev';
 
 // Static pages
 const staticPages = [

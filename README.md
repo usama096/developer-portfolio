@@ -74,7 +74,7 @@ portfolio-site/
 │       ├── index.tsx
 │       └── [slug].tsx
 ├── posts/             # MDX blog posts
-│   └── first-blog.mdx
+│   └── union-find-algorithm.mdx
 ├── public/            # Static assets
 │   ├── images/
 │   ├── blog-images/

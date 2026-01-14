@@ -275,7 +275,7 @@ export default function Home({ recentPosts }: HomeProps) {
                 be part of your vision.
               </p>
               <a
-                href="mailto:hello@usamahafeez.dev"
+                href="mailto:osamah.hafeez@gmail.com"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-primary-600 font-bold hover:bg-white/90 transition-colors"
               >
                 Get in Touch

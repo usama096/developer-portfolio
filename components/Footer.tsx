@@ -103,7 +103,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="mailto:hello@usamahafeez.dev"
+                  href="mailto:osamah.hafeez@gmail.com"
                   className="text-[var(--color-text-secondary)] hover:text-primary-500 transition-colors flex items-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +114,7 @@ export default function Footer() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  hello@usamahafeez.dev
+                  osamah.hafeez@gmail.com
                 </a>
               </li>
               <li>
@@ -142,9 +142,15 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         {/* FIX: Year is static for SSG - will be correct at build time */}
-        <div className="mt-12 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-center items-center gap-4">
+         <div className="mt-12 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[var(--color-text-secondary)]">
-            © 2026 Usama Hafeez. All rights reserved.
+            © 2026 John Doe. All rights reserved.
+          </p>
+          <p className="text-sm text-[var(--color-text-secondary)]">
+            Built with{' '}
+            <span className="text-primary-500">Next.js</span>
+            {' '}& deployed on{' '}
+            <span className="text-primary-500">Vercel</span>
           </p>
         </div>
       </div>

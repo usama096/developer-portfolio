@@ -52,11 +52,11 @@ export default function Projects() {
               an enterprise solution, or an open-source contribution, let&apos;s talk!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="mailto:hello@usamahafeez.dev" className="btn-primary">
+              <a href="mailto:osamah.hafeez@gmail.com" className="btn-primary">
                 Start a Conversation
               </a>
               <a
-                href="https://github.com/usama096"
+                href="https://github.com/usama-hafeez"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"

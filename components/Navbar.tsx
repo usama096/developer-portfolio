@@ -123,7 +123,7 @@ export default function Navbar() {
             </button>
 
             {/* Contact Button */}
-            <a href="mailto:hello@usamahafeez.dev" className="hidden sm:inline-flex btn-primary">
+            <a href="mailto:osamah.hafeez@gmail.com" className="hidden sm:inline-flex btn-primary">
               Get in Touch
             </a>
 
@@ -179,7 +179,7 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <a
-                  href="mailto:hello@usamahafeez.dev"
+                  href="mailto:osamah.hafeez@gmail.com"
                   className="block mx-4 mt-4 btn-primary text-center"
                 >
                   Get in Touch
